@@ -11,5 +11,5 @@ install_packages:
       - net-tools
 remove_packages:
     pkg.removed:
-      -pkgs:
+      - pkgs:
       - snap
