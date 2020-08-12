@@ -1,3 +1,5 @@
 base:
-  '*':
-  - user-wilma
+  'ZCE-DEV*':
+    - node_exporter
+    - pkgs
+    - users

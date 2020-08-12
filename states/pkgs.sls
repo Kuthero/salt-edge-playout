@@ -5,7 +5,7 @@ install_packages:
       - docker.io
       - docker-compose
       - iostat
-      - vnstat
+      - sysstat
       - htop
       - nano
       - net-tools
