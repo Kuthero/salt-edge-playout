@@ -31,7 +31,7 @@ delete_node_exporter_files:
 {% if ('amd64' in grains['osarch']) %}
 retrieve_node_exporter:
   cmd.run:
-    - name: wget -O /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.darwin-amd64.tar.gz
+    - name: wget -O /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
 
 extract_node_exporter:
   archive.extracted:
@@ -45,11 +45,11 @@ extract_node_exporter:
 move_node_exporter:
   file.rename:
     - name: /usr/local/bin/node_exporter
-    - source: /tmp/node_exporter-1.0.1.darwin-amd64/node_exporter
+    - source: /tmp/node_exporter-1.0.1.linux-amd64/node_exporter
 
 delete_node_exporter_dir:
   file.absent:
-    - name: /tmp/node_exporter-1.0.1.darwin-amd64
+    - name: /tmp/node_exporter-1.0.1.linux-amd64
 
 delete_node_exporter_files:
   file.absent:
