@@ -9,6 +9,7 @@ install_packages:
       - htop
       - nano
       - net-tools
+      - awscli
 remove_packages:
     pkg.removed:
       - pkgs:
